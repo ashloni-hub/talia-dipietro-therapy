@@ -628,12 +628,17 @@ a { color: inherit; }
 /* ---------- About / Intro ---------- */
 .about {
   position: relative;
-  background: var(--panel);
+  background: var(--mint-bg);
   padding: 100px 0;
 }
 .about--solid {
   background: #7a846a;
 }
+.about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) .eyebrow,
+.about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) h2,
+.about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) p,
+.about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) .who-list li { color: var(--white); }
+.about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) .pull-quote { color: var(--cream); }
 .about--cream {
   background: var(--cream);
 }
@@ -746,6 +751,16 @@ a { color: inherit; }
 .service-card h3 { font-size: 1.1rem; }
 .service-card p { color: var(--ink); font-size: 0.92rem; margin-bottom: 1.25em; }
 .service-card .arrow-link { color: var(--ink); }
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pillar-grid .service-card { width: auto; }
+@media (max-width: 780px) {
+  .pillar-grid { grid-template-columns: 1fr; }
+}
 
 /* ---------- Stats ---------- */
 .stats { padding: 100px 0 60px; }
@@ -1057,9 +1072,45 @@ a { color: inherit; }
   margin-top: 24px;
 }
 
+/* ---------- Statement (plain centered text section) ---------- */
+.statement { padding: 90px 0; }
+.statement-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.statement-inner p {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 0.6em;
+}
+.statement-inner p:last-child { margin-bottom: 0; }
+.statement-inner.left { text-align: left; margin: 0 auto; }
+.statement--plain .statement-inner p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+/* ---------- Crisis notice ---------- */
+.crisis-notice { padding: 22px 0; background: var(--cream); }
+.crisis-notice p {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- Issues checklist ---------- */
 .issues { padding: 100px 0; }
 .issues--tint { background: #7a846a; }
+.issues--tint h2,
+.issues--tint .eyebrow-center,
+.issues--tint .issue-list li { color: var(--white); }
 .issue-list {
   list-style: none;
   margin: 0;
