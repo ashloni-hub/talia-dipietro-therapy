@@ -252,6 +252,9 @@ a { color: inherit; }
   top: calc(100% + 10px);
   left: 0;
   min-width: 260px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--white);
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -276,6 +279,16 @@ a { color: inherit; }
   border-radius: 12px !important;
   font-size: 0.9rem !important;
   white-space: nowrap;
+}
+.dropdown-group { display: flex; flex-direction: column; gap: 2px; }
+.dropdown-group + .dropdown-group { margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(90, 58, 36, 0.1); }
+.dropdown-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--panel);
+  padding: 6px 14px 2px;
 }
 
 .nav-toggle {
