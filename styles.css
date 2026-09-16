@@ -615,6 +615,7 @@ a { color: inherit; }
   background: rgba(222, 183, 42, 0.16);
 }
 .benefit-card:nth-child(even) .icon-chip { background: rgba(228, 201, 166, 0.3); }
+.benefit-card:nth-child(even) .icon-chip.check-icon { background: var(--rose); }
 .icon-chip img { width: 26px; height: 26px; }
 .icon-chip.check-icon {
   background: var(--rose);
@@ -1091,7 +1092,7 @@ a { color: inherit; }
 .statement-inner.left { text-align: left; margin: 0 auto; }
 .statement--plain .statement-inner p {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--ink);
 }
