@@ -1273,6 +1273,13 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .reveal-from-right,
+  .reveal-from-left {
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-from-right.is-visible,
+  .reveal-from-left.is-visible { transform: translateY(0); }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-figure { order: -1; max-width: 360px; margin: 0 auto; }
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1297,6 +1304,7 @@ a { color: inherit; }
     right: 0;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
+    overflow-x: hidden;
     overscroll-behavior: contain;
     background: var(--white);
     border-radius: 24px;
@@ -1305,20 +1313,23 @@ a { color: inherit; }
     align-items: stretch;
     gap: 0;
     padding: 8px 24px 20px;
+    box-sizing: border-box;
     display: none;
   }
   .primary-nav.is-open { display: flex; }
   .primary-nav a:not(.btn) { padding: 12px 0; border-radius: 0; }
   .primary-nav a:not(.btn):hover { background: none; }
   .primary-nav .btn { margin-top: 12px; margin-left: 0; align-self: flex-start; }
+  .nav-dropdown { width: 100%; min-width: 0; }
   .dropdown-menu {
     position: static;
     left: auto;
-    width: auto;
+    width: 100%;
     min-width: 0;
-    max-width: none;
+    max-width: 100%;
     max-height: none;
     overflow: visible;
+    box-sizing: border-box;
     display: none;
     grid-template-columns: none;
     flex-direction: column;
@@ -1333,7 +1344,20 @@ a { color: inherit; }
     padding: 4px 0 8px 16px;
   }
   .nav-dropdown.is-open .dropdown-menu { display: flex; }
-  .dropdown-menu a { padding: 10px 4px !important; white-space: normal; }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropdown-group { width: 100%; min-width: 0; }
+  .dropdown-menu a {
+    padding: 10px 4px !important;
+    white-space: normal;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
   .dropdown-group + .dropdown-group { margin-top: 6px; padding-top: 10px; padding-left: 0; border-top: 1px solid rgba(90, 58, 36, 0.14); border-left: none; }
   .benefit-grid { grid-template-columns: 1fr; }
   .specialty-grid { grid-template-columns: 1fr; }
