@@ -292,7 +292,7 @@ a { color: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--panel);
-  padding: 6px 14px 2px;
+  padding: 6px 10px 2px;
 }
 
 .nav-toggle {
@@ -1354,7 +1354,7 @@ a { color: inherit; }
   }
   .dropdown-group { width: 100%; min-width: 0; }
   .dropdown-menu a {
-    padding: 10px 14px !important;
+    padding: 10px 10px !important;
     white-space: normal;
     width: 100%;
     box-sizing: border-box;
