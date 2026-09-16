@@ -1280,6 +1280,7 @@ a { color: inherit; }
   }
   .reveal-from-right.is-visible,
   .reveal-from-left.is-visible { transform: translateY(0); }
+  .hero { padding: 90px 0 55px; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-figure { order: -1; max-width: 360px; margin: 0 auto; }
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1352,7 +1353,7 @@ a { color: inherit; }
   }
   .dropdown-group { width: 100%; min-width: 0; }
   .dropdown-menu a {
-    padding: 10px 4px !important;
+    padding: 10px 14px !important;
     white-space: normal;
     width: 100%;
     box-sizing: border-box;
