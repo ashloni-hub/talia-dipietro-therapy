@@ -137,7 +137,7 @@ a { color: inherit; }
 
 .btn-primary {
   background: var(--lime);
-  color: #f5e8d3;
+  color: var(--ink);
   box-shadow: var(--shadow);
 }
 .btn-primary:hover { background: var(--lime-deep); }
@@ -166,7 +166,7 @@ a { color: inherit; }
   font-weight: 700;
   font-size: 0.92rem;
   text-decoration: none;
-  color: var(--cyan-accent);
+  color: var(--panel);
   transition: gap 0.2s ease, color 0.2s ease;
 }
 .arrow-link .arrow { transition: transform 0.2s ease; }
@@ -504,8 +504,8 @@ a { color: inherit; }
   position: absolute;
   top: -18px;
   right: 24px;
-  background: var(--teal-accent);
-  color: var(--white);
+  background: var(--white);
+  color: var(--ink);
   border-radius: 999px;
   padding: 12px 20px;
   box-shadow: var(--shadow-lg);
@@ -617,6 +617,7 @@ a { color: inherit; }
 .benefit-card:nth-child(even) .icon-chip { background: rgba(228, 201, 166, 0.3); }
 .icon-chip img { width: 26px; height: 26px; }
 .icon-chip.check-icon {
+  background: var(--rose);
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--ink);
@@ -740,7 +741,7 @@ a { color: inherit; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(90, 58, 36, 0.14); }
-.service-card { background: #deb72a; }
+.service-card { background: #eaccb1; }
 .service-card img {
   width: 100%;
   height: auto;
