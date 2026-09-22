@@ -589,7 +589,7 @@ a { color: inherit; }
 }
 .marquee-track span {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-size: 1.2rem;
   color: var(--white);
   white-space: nowrap;
