@@ -651,7 +651,7 @@ a { color: inherit; }
   padding: 100px 0;
 }
 .about--solid {
-  background: #7a846a;
+  background: #5f6b52;
 }
 .about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) .eyebrow,
 .about--solid:not(.about--tint2):not(.about--tint3):not(.about--cream) h2,
@@ -840,11 +840,11 @@ a { color: inherit; }
 /* ---------- Bio ---------- */
 .bio {
   position: relative;
-  background: #5a3a24;
+  background: var(--panel);
   padding: 110px 0;
 }
 .bio .eyebrow {
-  color: #deb72a;
+  color: var(--white);
   background: none;
 }
 .bio-copy h2 { color: var(--white); }
