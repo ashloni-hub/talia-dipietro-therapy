@@ -575,7 +575,7 @@ a { color: inherit; }
 
 /* ---------- Marquee band ---------- */
 .marquee-band {
-  background: #5a3a24;
+  background: var(--panel);
   overflow: hidden;
   padding: 26px 0;
   position: relative;
@@ -594,7 +594,7 @@ a { color: inherit; }
   color: var(--white);
   white-space: nowrap;
 }
-.marquee-track .dot-sep { color: var(--cyan-accent); font-style: normal; }
+.marquee-track .dot-sep { color: var(--cream); font-style: normal; }
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
