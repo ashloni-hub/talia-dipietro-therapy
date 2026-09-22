@@ -594,7 +594,14 @@ a { color: inherit; }
   color: var(--white);
   white-space: nowrap;
 }
-.marquee-track .dot-sep { color: var(--cream); font-style: normal; }
+.marquee-track .dot-sep {
+  color: var(--rose);
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(2px);
+}
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
