@@ -656,7 +656,7 @@ a { color: inherit; }
 .testimonial-slider { max-width: 760px; margin: 0 auto; }
 .testimonial-track {
   position: relative;
-  background: var(--mint);
+  background: #606B52;
   border-radius: 28px;
   padding: 50px 60px;
   box-shadow: 0 10px 26px rgba(90, 58, 36, 0.08);
@@ -668,10 +668,10 @@ a { color: inherit; }
   font-family: var(--font-display);
   font-size: 1.15rem;
   line-height: 1.6;
-  color: var(--ink);
+  color: var(--white);
   margin-bottom: 20px;
 }
-.testimonial-author { color: var(--ink-soft); font-weight: 600; margin-bottom: 0; }
+.testimonial-author { color: rgba(255, 255, 255, 0.78); font-weight: 600; margin-bottom: 0; }
 .testimonial-controls {
   display: flex;
   align-items: center;
