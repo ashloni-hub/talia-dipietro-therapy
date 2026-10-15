@@ -104,7 +104,8 @@
       </div>
       <div class="about-copy reveal">
         <span class="eyebrow">Send a Message</span>
-        <form class="cta-form" id="ctaForm">
+        <p id="formError" class="form-error" hidden>Something went wrong sending your message. Please try again, or email us directly at <a href="mailto:info@taliadipietro.com">info@taliadipietro.com</a>.</p>
+        <form class="cta-form" id="ctaForm" action="/api/contact" method="POST">
           <label class="sr-only" for="ctaName">Name</label>
           <input type="text" id="ctaName" name="name" placeholder="Name" required />
           <label class="sr-only" for="ctaEmail">Email</label>
@@ -113,6 +114,9 @@
           <input type="tel" id="ctaPhone" name="phone" placeholder="Phone" required />
           <label class="sr-only" for="ctaMessage">Brief reason for reaching out</label>
           <textarea id="ctaMessage" name="message" placeholder="Brief reason for reaching out" rows="4" required></textarea>
+          <label class="sr-only" for="ctaWebsite">Leave this field blank</label>
+          <input type="text" id="ctaWebsite" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" />
+          <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER"></div>
           <button class="btn btn-primary cta-form-submit" type="submit">Send Message</button>
           <p class="cta-form-note">Please keep your message brief and avoid sensitive health details. This form is not a secure channel, and we can cover anything clinical on the consultation call.</p>
         </form>
@@ -224,6 +228,13 @@
   </div>
 </footer>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="script.js"></script>
+<script>
+  if (new URLSearchParams(location.search).get('error')) {
+    var formError = document.getElementById('formError');
+    if (formError) formError.hidden = false;
+  }
+</script>
 </body>
 </html>

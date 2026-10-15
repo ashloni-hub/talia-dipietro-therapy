@@ -101,20 +101,14 @@ if (heroCarousel) {
   }
 }
 
-// Contact form -> composes a mailto to Dr. Coleman
+// Contact form -> submits to the /api/contact Worker route; prevent double-submit
 const ctaForm = document.getElementById('ctaForm');
 if (ctaForm) {
-  ctaForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = ctaForm.name.value.trim();
-    const email = ctaForm.email.value.trim();
-    const phone = ctaForm.phone.value.trim();
-    const preferred = ctaForm.preferred ? ctaForm.preferred.value.trim() : '';
-    const message = ctaForm.message.value.trim();
-    const subject = encodeURIComponent(`New inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred contact method: ${preferred}\n\nReason for reaching out:\n${message}`
-    );
-    window.location.href = `mailto:liberationcounselingllc@pm.me?subject=${subject}&body=${body}`;
+  ctaForm.addEventListener('submit', () => {
+    const submitBtn = ctaForm.querySelector('.cta-form-submit');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
   });
 }

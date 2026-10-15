@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "talia-dipietro-therapy",
+  "compatibility_date": "2026-10-15",
+  "main": "src/worker.js",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "CONTACT_TO_EMAIL": "info@taliadipietro.com",
+    "CONTACT_FROM_EMAIL": "Talia DiPietro Therapy <no-reply@taliadipietro.com>"
+  }
+}
