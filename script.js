@@ -101,6 +101,32 @@ if (heroCarousel) {
   }
 }
 
+// Testimonial slider: manual prev/next + dots, no auto-advance
+const testimonialSlider = document.getElementById('testimonialSlider');
+if (testimonialSlider) {
+  const slides = [...testimonialSlider.querySelectorAll('.testimonial-slide')];
+  const dots = [...testimonialSlider.querySelectorAll('.testimonial-dot')];
+  let activeIndex = 0;
+
+  function goToTestimonial(index) {
+    slides[activeIndex].classList.remove('is-active');
+    dots[activeIndex].classList.remove('is-active');
+    activeIndex = (index + slides.length) % slides.length;
+    slides[activeIndex].classList.add('is-active');
+    dots[activeIndex].classList.add('is-active');
+  }
+
+  testimonialSlider.querySelector('.testimonial-prev').addEventListener('click', () => {
+    goToTestimonial(activeIndex - 1);
+  });
+  testimonialSlider.querySelector('.testimonial-next').addEventListener('click', () => {
+    goToTestimonial(activeIndex + 1);
+  });
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goToTestimonial(i));
+  });
+}
+
 // Contact form -> submits to the /api/contact Worker route; prevent double-submit
 const ctaForm = document.getElementById('ctaForm');
 if (ctaForm) {

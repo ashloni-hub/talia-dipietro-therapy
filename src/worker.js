@@ -125,7 +125,7 @@ async function handleContact(request, env, ctx) {
             from: env.CONTACT_FROM_EMAIL,
             to: email,
             subject: 'Thanks for reaching out to Talia DiPietro Therapy',
-            text: `Hi ${name},\n\nThanks for reaching out. I respond within 24 to 48 hours, usually inside one business day.\n\nIf this is urgent, this form is not a crisis line. Call or text 988 to reach the Suicide and Crisis Lifeline, or call 911.\n\nTalia`,
+            text: `Hi ${name},\n\nThank you for reaching out! I will get back to you within 1 business day.\n\nIf this is urgent, this form is not a crisis line. Call or text 988 to reach the Suicide and Crisis Lifeline, or call 911.\n\nTalia`,
           }),
         });
         if (!autoReplyResponse.ok) {
